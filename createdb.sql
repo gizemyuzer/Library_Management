@@ -1,9 +1,11 @@
 CREATE DATABASE library_management;
 
+USE library_management;
+
 CREATE TABLE tbl_publisher (
 		publisher_PublisherName VARCHAR(100) PRIMARY KEY NOT NULL,
 		publisher_PublisherAddress VARCHAR(200) NOT NULL,
-		publisher_PublisherPhone VARCHAR(50) NOT NULL
+		publisher_PublisherPhone VARCHAR(500) NOT NULL
 	);
 
 	CREATE TABLE tbl_book (
@@ -27,6 +29,8 @@ CREATE TABLE tbl_publisher (
 		borrower_BorrowerPhone VARCHAR(50) NOT NULL
 	);
 
+	
+
 	CREATE TABLE tbl_book_loans (
 		book_loans_LoansID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 		book_loans_BookID INT NOT NULL,
@@ -39,6 +43,7 @@ CREATE TABLE tbl_publisher (
 		book_loans_DueDate VARCHAR(50) NOT NULL
 	);
 
+	 
 	CREATE TABLE tbl_book_copies (
 		book_copies_CopiesID INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
 		book_copies_BookID INT NOT NULL,
